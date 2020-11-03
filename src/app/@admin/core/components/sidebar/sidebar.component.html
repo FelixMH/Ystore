@@ -1,0 +1,15 @@
+<!-- Sidebar -->
+<div class="border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+
+        <a [routerLink]="['home']" routerLinkActive="router-link-active">
+          Y Store
+        </a>
+
+    </div>
+    <div class="list-group list-group-flush">
+        <a [routerLink]="['','admin']" routerLinkActive="router-link-active" class="list-group-item list-group-item-action sidebar-item"><i class="fa fa-columns"></i> Dashboard</a>
+        <a [routerLink]="['','admin','users']" routerLinkActive="router-link-active" class="list-group-item list-group-item-action sidebar-item"><i class="fa fa-id-card"></i> Users</a>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->

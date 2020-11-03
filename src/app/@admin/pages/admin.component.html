@@ -1,4 +1,4 @@
-<h1>Admin</h1>
+<!-- <h1>Admin</h1>
 <ul>
     <li>
         <a [routerLink]="['home']" routerLinkActive="router-link-active">Volver a Home</a>
@@ -9,5 +9,22 @@
     <li>
         <a [routerLink]="['users']" routerLinkActive="router-link-active">users</a>
     </li>
-</ul>
-<router-outlet></router-outlet>
+</ul> -->
+
+<div class="d-flex" id="wrapper">
+
+    <app-admin-sidebar *ngIf="toggledValue"></app-admin-sidebar>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <app-admin-header (toggle)="toggled($event)"></app-admin-header>
+
+        <div class="container-fluid">
+            <app-admin-title></app-admin-title>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
